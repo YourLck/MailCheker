@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EAE9D7229E0901800A60E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D7129E0901800A60E57 /* AppDelegate.swift */; };
+		5EAE9D7429E0901800A60E57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D7329E0901800A60E57 /* SceneDelegate.swift */; };
+		5EAE9D7629E0901800A60E57 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D7529E0901800A60E57 /* VerificationViewController.swift */; };
+		5EAE9D7B29E0901900A60E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EAE9D7A29E0901900A60E57 /* Assets.xcassets */; };
+		5EAE9D7E29E0901900A60E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAE9D7C29E0901900A60E57 /* LaunchScreen.storyboard */; };
+		5EAE9D8B29E0AB3D00A60E57 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D8A29E0AB3D00A60E57 /* StatusLabel.swift */; };
+		5EAE9D8F29E1F02500A60E57 /* UiStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D8E29E1F02500A60E57 /* UiStackView.swift */; };
+		5EAE9D9129E1F22800A60E57 /* MailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D9029E1F22800A60E57 /* MailTextField.swift */; };
+		5EAE9D9329E1F70300A60E57 /* VerificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D9229E1F70300A60E57 /* VerificationButton.swift */; };
+		5EAE9D9529E1F89C00A60E57 /* MailsCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D9429E1F89C00A60E57 /* MailsCollectionsView.swift */; };
+		5EAE9D9829E1FCB300A60E57 /* MailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE9D9729E1FCB300A60E57 /* MailCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5EAE9D6E29E0901800A60E57 /* MailCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EAE9D7129E0901800A60E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EAE9D7329E0901800A60E57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5EAE9D7529E0901800A60E57 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		5EAE9D7A29E0901900A60E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EAE9D7D29E0901900A60E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EAE9D7F29E0901900A60E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EAE9D8A29E0AB3D00A60E57 /* StatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
+		5EAE9D8E29E1F02500A60E57 /* UiStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiStackView.swift; sourceTree = "<group>"; };
+		5EAE9D9029E1F22800A60E57 /* MailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailTextField.swift; sourceTree = "<group>"; };
+		5EAE9D9229E1F70300A60E57 /* VerificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationButton.swift; sourceTree = "<group>"; };
+		5EAE9D9429E1F89C00A60E57 /* MailsCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailsCollectionsView.swift; sourceTree = "<group>"; };
+		5EAE9D9729E1FCB300A60E57 /* MailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EAE9D6B29E0901800A60E57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EAE9D6529E0901800A60E57 = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D7029E0901800A60E57 /* MailCheck */,
+				5EAE9D6F29E0901800A60E57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EAE9D6F29E0901800A60E57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D6E29E0901800A60E57 /* MailCheck.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EAE9D7029E0901800A60E57 /* MailCheck */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D8C29E1EFF300A60E57 /* Extensions */,
+				5EAE9D8829E090B000A60E57 /* Application */,
+				5EAE9D8729E0909E00A60E57 /* Controllers */,
+				5EAE9D8629E0906A00A60E57 /* Views */,
+				5EAE9D8529E0905D00A60E57 /* Model */,
+				5EAE9D8929E090E900A60E57 /* Resources */,
+			);
+			path = MailCheck;
+			sourceTree = "<group>";
+		};
+		5EAE9D8529E0905D00A60E57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EAE9D8629E0906A00A60E57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D9629E1FC8E00A60E57 /* Cells */,
+				5EAE9D8A29E0AB3D00A60E57 /* StatusLabel.swift */,
+				5EAE9D9029E1F22800A60E57 /* MailTextField.swift */,
+				5EAE9D9229E1F70300A60E57 /* VerificationButton.swift */,
+				5EAE9D9429E1F89C00A60E57 /* MailsCollectionsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5EAE9D8729E0909E00A60E57 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D7529E0901800A60E57 /* VerificationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5EAE9D8829E090B000A60E57 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D7129E0901800A60E57 /* AppDelegate.swift */,
+				5EAE9D7329E0901800A60E57 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5EAE9D8929E090E900A60E57 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D7A29E0901900A60E57 /* Assets.xcassets */,
+				5EAE9D7C29E0901900A60E57 /* LaunchScreen.storyboard */,
+				5EAE9D7F29E0901900A60E57 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5EAE9D8C29E1EFF300A60E57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D8D29E1F01000A60E57 /* UiKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EAE9D8D29E1F01000A60E57 /* UiKit */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D8E29E1F02500A60E57 /* UiStackView.swift */,
+			);
+			path = UiKit;
+			sourceTree = "<group>";
+		};
+		5EAE9D9629E1FC8E00A60E57 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE9D9729E1FCB300A60E57 /* MailCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EAE9D6D29E0901800A60E57 /* MailCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EAE9D8229E0901900A60E57 /* Build configuration list for PBXNativeTarget "MailCheck" */;
+			buildPhases = (
+				5EAE9D6A29E0901800A60E57 /* Sources */,
+				5EAE9D6B29E0901800A60E57 /* Frameworks */,
+				5EAE9D6C29E0901800A60E57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MailCheck;
+			productName = MailCheck;
+			productReference = 5EAE9D6E29E0901800A60E57 /* MailCheck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EAE9D6629E0901800A60E57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5EAE9D6D29E0901800A60E57 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 5EAE9D6929E0901800A60E57 /* Build configuration list for PBXProject "MailCheck" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EAE9D6529E0901800A60E57;
+			productRefGroup = 5EAE9D6F29E0901800A60E57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EAE9D6D29E0901800A60E57 /* MailCheck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EAE9D6C29E0901800A60E57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EAE9D7E29E0901900A60E57 /* LaunchScreen.storyboard in Resources */,
+				5EAE9D7B29E0901900A60E57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EAE9D6A29E0901800A60E57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EAE9D8B29E0AB3D00A60E57 /* StatusLabel.swift in Sources */,
+				5EAE9D9829E1FCB300A60E57 /* MailCollectionViewCell.swift in Sources */,
+				5EAE9D8F29E1F02500A60E57 /* UiStackView.swift in Sources */,
+				5EAE9D9329E1F70300A60E57 /* VerificationButton.swift in Sources */,
+				5EAE9D9129E1F22800A60E57 /* MailTextField.swift in Sources */,
+				5EAE9D7629E0901800A60E57 /* VerificationViewController.swift in Sources */,
+				5EAE9D9529E1F89C00A60E57 /* MailsCollectionsView.swift in Sources */,
+				5EAE9D7229E0901800A60E57 /* AppDelegate.swift in Sources */,
+				5EAE9D7429E0901800A60E57 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EAE9D7C29E0901900A60E57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EAE9D7D29E0901900A60E57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EAE9D8029E0901900A60E57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EAE9D8129E0901900A60E57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EAE9D8329E0901900A60E57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MailCheck/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YourLck21.MailCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EAE9D8429E0901900A60E57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MailCheck/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YourLck21.MailCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EAE9D6929E0901800A60E57 /* Build configuration list for PBXProject "MailCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EAE9D8029E0901900A60E57 /* Debug */,
+				5EAE9D8129E0901900A60E57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EAE9D8229E0901900A60E57 /* Build configuration list for PBXNativeTarget "MailCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EAE9D8329E0901900A60E57 /* Debug */,
+				5EAE9D8429E0901900A60E57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EAE9D6629E0901800A60E57 /* Project object */;
+}
