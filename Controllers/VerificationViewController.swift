@@ -9,6 +9,7 @@ import UIKit
 
 class VerificationViewController: UIViewController {
     
+    private let verificationModel = VerificationModel()
     private let statusLabel = StatusLabel()
     private let mailTextField = MailTextField()
     private let verificationButton = VerificationButton()
@@ -26,8 +27,8 @@ class VerificationViewController: UIViewController {
     private lazy var StackView = UIStackView(arrangedSubviews: [mailTextField,
                                                                verificationButton,
                                                                collectionView],
-                                        axis: .vertical,
-                                        spacing: 20)
+                                             axis: .vertical,
+                                             spacing: 20)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,6 @@ class VerificationViewController: UIViewController {
         setupViews()
         setDelegates()
         setConstraints()
-        
     }
 
     private func setupViews() {
@@ -43,25 +43,23 @@ class VerificationViewController: UIViewController {
         view.addSubview(statusLabel)
         view.addSubview(StackView)
         verificationButton.addTarget(self, action: #selector(verificationButtonTapped), for: .touchUpInside)
-        
     }
     
     private func setDelegates() {
         collectionView.dataSource = self
         collectionView.selectMailDelegate = self
+        mailTextField.textFiledDelegate = self
     }
     
     @objc private func verificationButtonTapped() {
         print("ButtonTap")
     }
-
 }
-
 // MARK: - UICollectionViewDataSource
 
 extension VerificationViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
+        verificationModel.filteredArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,20 +67,44 @@ extension VerificationViewController: UICollectionViewDataSource {
                                                             for: indexPath) as? MailCollectionViewCell
         else { return UICollectionViewCell() }
         
+        let mailLabelText = verificationModel.filteredArray[indexPath.row]
+        cell.cellConfigure(mailLabelText: mailLabelText)
         return cell
     }
 }
-
 // MARK: - SelectProposedMailProtocol
 
 extension VerificationViewController: SelectProposedMailProtocol {
     func selectProposedMail(indexPath: IndexPath) {
-        printContent(indexPath)
+        guard let text = mailTextField.text else { return }
+        verificationModel.getMailName(text: text)
+        let domainMail = verificationModel.filteredArray[indexPath.row]
+        let mailFullname = verificationModel.mailsName + domainMail
+        mailTextField.text = mailFullname
+        statusLabel.isValid = mailFullname.isValid()
+        verificationButton.isValid = mailFullname.isValid()
+        verificationModel.filteredArray = []
+        collectionView.reloadData()
+        print(mailFullname)
+    }
+}
+// MARK: - ActionsMailTextFieldProtocol
+
+extension VerificationViewController: ActionsMailTextFieldProtocol {
+    func typingText(text: String) {
+        statusLabel.isValid = text.isValid()
+        verificationButton.isValid = text.isValid()
+        verificationModel.getFilteredMail(text: text)
+        collectionView.reloadData()
     }
     
-    
+    func cleanOutTextField() {
+        statusLabel.setDefaultSetting()
+        verificationButton.setDefaultSetting()
+        verificationModel.filteredArray = []
+        collectionView.reloadData()
+    }
 }
-
 // MARK: - setConstraints
 
 extension VerificationViewController {
@@ -106,4 +128,3 @@ extension VerificationViewController {
         ])
     }
 }
-

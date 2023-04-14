@@ -14,7 +14,6 @@ class MailCollectionViewCell: UICollectionViewCell {
        let label = UILabel()
         label.font = .boldSystemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.backgroundColor = .black
         return label
     }()
     
@@ -36,6 +35,14 @@ class MailCollectionViewCell: UICollectionViewCell {
         
         addSubview(domainLabel)
     }
+    
+    private func configure(mailLabelText: String) {
+        domainLabel.text = mailLabelText
+    }
+    
+    public func cellConfigure(mailLabelText: String) {
+        configure(mailLabelText: mailLabelText)
+    }
 }
 
 extension MailCollectionViewCell {
@@ -45,6 +52,5 @@ extension MailCollectionViewCell {
             domainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             domainLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        
     }
 }

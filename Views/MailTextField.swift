@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol ActionsMailTextFieldProtocol: AnyObject {
+    func typingText(text: String)
+    func cleanOutTextField()
+}
+
 class MailTextField: UITextField {
+    
+    weak var textFiledDelegate: ActionsMailTextFieldProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         configure()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -31,9 +39,31 @@ class MailTextField: UITextField {
         leftViewMode = .always
         clearButtonMode = .always
         returnKeyType = .done
-        placeholder = "Entar mail"
+        placeholder = "Enter mail"
         font = .boldSystemFont(ofSize: 20)
         tintColor = .red // 808080
         translatesAutoresizingMaskIntoConstraints = false
+        delegate = self
+    }
+}
+
+extension MailTextField: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text, let rangeText = Range(range, in: text) {
+            let updateText = text.replacingCharacters(in: rangeText, with: string)
+            textFiledDelegate?.typingText(text: updateText)
+//            print(updateText)
+        }
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        textFiledDelegate?.cleanOutTextField()
+        return true
     }
 }

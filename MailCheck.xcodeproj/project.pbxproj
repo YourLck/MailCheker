@@ -73,7 +73,7 @@
 				5EAE9D8529E0905D00A60E57 /* Model */,
 				5EAE9D8929E090E900A60E57 /* Resources */,
 			);
-			path = MailCheck;
+			name = MailCheck;
 			sourceTree = "<group>";
 		};
 		5EAE9D8529E0905D00A60E57 /* Model */ = {
