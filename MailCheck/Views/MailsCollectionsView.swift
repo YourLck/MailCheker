@@ -37,7 +37,6 @@ class MailsCollectionsView: UICollectionView {
         delegate = self
     }
 }
-
 // MARK: - UICollectionViewDelegate
 extension MailsCollectionsView: UICollectionViewDelegate {
     
@@ -45,7 +44,6 @@ extension MailsCollectionsView: UICollectionViewDelegate {
         selectMailDelegate?.selectProposedMail(indexPath: indexPath)
     }
 }
-
 
 extension MailsCollectionsView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

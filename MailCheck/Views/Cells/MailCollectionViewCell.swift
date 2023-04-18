@@ -44,7 +44,7 @@ class MailCollectionViewCell: UICollectionViewCell {
         configure(mailLabelText: mailLabelText)
     }
 }
-
+// MARK: - setConstraints
 extension MailCollectionViewCell {
     
     private func setConstraints() {

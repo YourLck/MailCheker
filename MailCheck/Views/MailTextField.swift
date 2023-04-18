@@ -31,7 +31,7 @@ class MailTextField: UITextField {
         backgroundColor = .white
         borderStyle = .none
         layer.cornerRadius = 10
-        textColor = .red //373737
+        textColor = .black
         leftView = UIView(frame: CGRect(x: 0,
                                         y: 0,
                                         width: 15,
@@ -41,7 +41,7 @@ class MailTextField: UITextField {
         returnKeyType = .done
         placeholder = "Enter mail"
         font = .boldSystemFont(ofSize: 20)
-        tintColor = .red // 808080
+        tintColor = .black
         translatesAutoresizingMaskIntoConstraints = false
         delegate = self
     }
@@ -57,7 +57,6 @@ extension MailTextField: UITextFieldDelegate {
         if let text = textField.text, let rangeText = Range(range, in: text) {
             let updateText = text.replacingCharacters(in: rangeText, with: string)
             textFiledDelegate?.typingText(text: updateText)
-//            print(updateText)
         }
         return true
     }

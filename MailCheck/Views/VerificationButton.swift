@@ -1,13 +1,14 @@
 //
-//  StatusLabel.swift
+//  VerificationButton.swift
 //  MailCheck
 //
-//  Created by Nikita Nemtsu on 07.04.2023.
+//  Created by Nikita Nemtsu on 08.04.2023.
 //
 
+import Foundation
 import UIKit
 
-class StatusLabel: UILabel {
+class VerificationButton: UIButton {
     
     public var isValid = false {
         didSet {
@@ -18,6 +19,7 @@ class StatusLabel: UILabel {
             }
         }
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -29,21 +31,23 @@ class StatusLabel: UILabel {
     }
     
     private func configure() {
-        text = "Check your mail"
-        textColor = #colorLiteral(red: 0.9450980392, green: 0.9333333333, blue: 0.862745098, alpha: 1)
-        font = .boldSystemFont(ofSize: 16)
-        adjustsFontSizeToFitWidth = true
-        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        setTitle("Verification Button", for: .normal)
+        layer.cornerRadius = 10
+        titleLabel?.font = .boldSystemFont(ofSize: 17)
+        isEnabled = false
+        alpha = 0.5
+        translatesAutoresizingMaskIntoConstraints = false 
     }
     
     private func setNotValidSettings() {
-        text = "Mail is not valid. Example: name@domain.com"
-        textColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        isEnabled = false
+        alpha = 0.5
     }
     
     private func setValidSettings() {
-        text = "Mail is valid."
-        textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        isEnabled = true
+        alpha = 1
     }
     
     public func setDefaultSetting() {

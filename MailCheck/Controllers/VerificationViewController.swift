@@ -52,9 +52,30 @@ class VerificationViewController: UIViewController {
     }
     
     @objc private func verificationButtonTapped() {
-        print("ButtonTap")
+
+        guard let mail = mailTextField.text else { return }
+        
+        NetworkDataFatch.shared.fetchMail(verifableMail: mail) { result, error in
+            
+            if error == nil {
+                guard let result = result else { return }
+                if result.success {
+                    guard let didYouMeanError = result.did_you_mean else {
+                        Alert.showResultAlert(vc: self, message: "Mail status \(result.result) \n \(result.reasonDescription)")
+                        return
+                        }
+                    Alert.showErrorAlert(vc: self, message: "Did you mean \(didYouMeanError)") { [weak self] in
+                        guard let self = self else { return }
+                        self.mailTextField.text = didYouMeanError
+                    }
+                    }
+                } else {
+                    guard let errorDiscription = error?.localizedDescription else { return }
+                    Alert.showResultAlert(vc: self, message: errorDiscription)
+                }
+            }
+        }
     }
-}
 // MARK: - UICollectionViewDataSource
 
 extension VerificationViewController: UICollectionViewDataSource {
@@ -85,7 +106,6 @@ extension VerificationViewController: SelectProposedMailProtocol {
         verificationButton.isValid = mailFullname.isValid()
         verificationModel.filteredArray = []
         collectionView.reloadData()
-        print(mailFullname)
     }
 }
 // MARK: - ActionsMailTextFieldProtocol
@@ -115,7 +135,7 @@ extension VerificationViewController {
             backgroundImageView.heightAnchor.constraint(equalTo: view.heightAnchor),
             backgroundImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            statusLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
+            statusLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 230),
             statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
             
