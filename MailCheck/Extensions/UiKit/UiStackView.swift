@@ -1,9 +1,3 @@
-//
-//  UiStackView.swift
-//  MailCheck
-//
-//  Created by Nikita Nemtsu on 08.04.2023.
-//
 
 import UIKit
 

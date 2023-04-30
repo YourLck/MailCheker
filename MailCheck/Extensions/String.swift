@@ -1,9 +1,3 @@
-//
-//  String.swift
-//  MailCheck
-//
-//  Created by Nikita Nemtsu on 14.04.2023.
-//
 
 import Foundation
 

@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  MailCheck
-//
-//  Created by Nikita Nemtsu on 07.04.2023.
-//
 
 import UIKit
 

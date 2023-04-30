@@ -1,9 +1,3 @@
-//
-//  MailResponceModel.swift
-//  MailCheck
-//
-//  Created by Nikita Nemtsu on 18.04.2023.
-//
 
 import Foundation
 
